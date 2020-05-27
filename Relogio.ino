@@ -2,17 +2,26 @@
 #include <U8g2lib.h>
 #include <SPI.h>
 #include <Wire.h>
+
+//Set the Hour Ten
 int Dh = 2;
+//Set the Hour Unit
 int Uh = 2;
+//Set the Minute Ten
 int Dm = 5;
+//Set the Minute Unit
 int Um = 4;
+
+//Defining Variables To convert to string and then transfer to the display.
+//Converting Variables into string
 String Dhora;
 String Uhora;
 String Dminuto;
 String Uminuto;
+//hour with the ten and with the unit.
 String Hora;
+//minute with the ten and with the unit.
 String Minuto;
-
 
 U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0); 
 
@@ -41,7 +50,7 @@ U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0);
     }
 
    u8g2.clearBuffer();// clear the internal memory
-   u8g2.setFont(u8g2_font_logisoso28_tr);  // chooe a suitable font at https://github.com/olikraus/u8g2/wiki/fntlistall
+   u8g2.setFont(u8g2_font_logisoso28_tr);  // font
     Dhora = String(Dh);
     Uhora = String(Uh);
     Hora = Dhora+Uhora;
